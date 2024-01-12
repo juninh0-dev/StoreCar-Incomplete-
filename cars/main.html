@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alugue seu carro aqui</title>
+</head>
+<body>
+    <header>
+<!--nav-bar-->
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Open Car</h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="help.html" class="nav-link"><img src="assets/int.png" alt="Interrogation-Point">Ajuda</a></li>
+                    <li class="nav-item"><a href="MinhasReservas.html" class="nav-link">Minhas Reservas</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="login.html">Entrar</a></button>
+            </div>
+            </div>
+        </nav>
+<!--end nav-bar-->
+    </header>
+</div>
+
+<!--Inputs-alugar-->
+<div id="alugar">
+    <p id="p1"><strong>Alugue um carro</strong></p>
+    <p id="p2">Local de Retirada</p>
+    
+        <input class="input-place" type="text" required placeholder="📍 Onde você quer alugar?">
+        <input class="input-date-remove" type="datetime-local">
+        <input class="input-date-return" type="datetime-local"> 
+        <button id="button-search" type="submit"><a href="#">Buscar</a></button>
+        <input class="input-give" type="radio"> <span>Devolver em outra loja</span>    
+</div>
+<!--End Inputs-alugar-->
+
+<!--Carrossel-->
+    <div class="slider">
+        <div class="slides">
+            <!--Radio Buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <!-- End Radio Buttons -->
+
+            <!-- Slide Img -->
+            <div class="slide-first">
+                <img src="assets/img1.png" alt="imagem-1">
+            </div>
+            <div class="slide">
+                <img src="assets/img2.png" alt="imagem-2">
+            </div>
+            <!-- End Slide Img -->
+
+            <!--Navigation auto-->
+            <div class="navigation-bar">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+        </div>
+<!-- End do Carrossel-->
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
