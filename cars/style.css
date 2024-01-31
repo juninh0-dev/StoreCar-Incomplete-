@@ -1,30 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap');
+html, body{
     padding: 0;
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
 
-header{
+/*Style of navbar*/
+
+.navbar{
+    display: flex;/*Deixa o elemento flexivel*/
+    justify-content: space-between;/*alinha os elementos filhos ao longo de todo o espaço do eixo principal*/
+    padding: 1.5rem 2.5rem;
     background-color: #24252a;
     box-shadow: 0px 3px 10px #464646;
 }
 
-.nav-bar{
-    display: flex;/*Deixa o elemento flexivel*/
-    justify-content: space-between;/*alinha os elementos filhos ao longo de todo o espaço do eixo principal*/
-    padding: 1.5rem 2.5rem;
-}
-
-
-.logo{
+.navbar > li {
     display: flex;
-    align-items: center;/*ALinha os itens no centro*/;
+    align-items: center;/*Alinha os itens no centro*/;
     padding-right: 25rem;
-}
-
-.logo h1{
-    color: white;
+    font-weight: bold;
 }
 
 .nav-list{
@@ -32,14 +27,40 @@ header{
     align-items: center;
 }
 
-.nav-list ul{
+.nav-list > ul{
     display: flex;
     justify-content: center;
     list-style: none;/*tira frufru*/
 }
 
-.nav-item{
-    margin: 0 15px;
+.navbar > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar > ul > li,
+ .navbar > ul > .nav-list > li {
+    color: rgb(255 255 255);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.navbar > li > .nav-item > li :hover {
+   font-weight: 700;
+}
+
+.navbar > ul > .nav-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-item > .help-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
 }
 
 .nav-link{
@@ -49,65 +70,91 @@ header{
     font-weight: 400;
 }
 
-.login-button button{
+.navbar > ul > .nav-list > button{
     display: flex;
     justify-content: center;
     border: none;
     background-color: #0187a7;
+    color: white;
+    list-style: none;
     padding: 10px 15px;
     border-radius: 5px;
 }
 
-.login-button button a{
-    text-decoration: none;
+
+.login-btn{
     color: white;
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/*End Style of navbar*/
+
+/*Style of rent*/
+
+.alugar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6em 0em 5em;
+    gap: 1rem;
+    background: rgba(0,0,0,.45);
+    width: 100%;
 }
 
 input.input-place{
+    display: flex;
     border-radius: 5px;
     box-shadow: 0px;
     box-sizing: 0;
-    margin-left: 100px;
-    margin-top: 10px;
-    padding: 10px;
-    width: 25rem;
+    padding: 0.5rem;
     font-size: 18px;
     border: none;
+    width: 100%;
+}
+
+input.input-place-return{
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0px;
+    box-sizing: 0;
+    padding: 0.5rem;
+    font-size: 18px;
+    border: none;
+    width: 100%;
 }
 
 input.input-date-remove{
+    display: flex;
     border-radius: 5px;
     box-shadow: 0px;
     box-sizing: 0;
-    margin-left: 10px;
-    padding: 10px;
-    width: 15rem;
+    padding: 0.5rem;
+    width: 100%;
     font-size: 18px;
     border: none;
+    width: 100%;
 }
 
 input.input-date-return{
+    display: flex;
     border: none;
     border-radius: 5px;
     box-shadow: 0px;
-    margin-left: 10px;
-    padding: 10px;
-    width: 15rem;
+    padding: 0.5rem;
+    width: 100%;
     font-size: 18px;
-    
 }
 
 #button-search{
-    display: inline-block;
+    display: flex;
     box-shadow: none;
     border-color: white;
     border-width: 0.2vh;
-    padding: 2vh 3vh;
+    padding: 0.5rem 1rem 0.1rem;
     background-color: #0187a7;
     border-radius: 0.2em;
-    margin-left: 5vh;
 }
 
 #button-search a{
@@ -117,29 +164,37 @@ input.input-date-return{
     font-size: 1.1em;
 }
 
-#alugar{
-    justify-content: spa;
-    padding: 0.6em 0em 5em;
-    background: rgba(0,0,0,.45);
-
-}
-
-
-#p1{
-    margin-top: 30px;
-    margin-left: 100px;
-    font-size: 20px;
+.p1{
+    display: flex;
+    font-size: 3.3vh;
     color: white;
 }
 
-#p2{
-    margin-top: 20px;
-    margin-left: 100px;
+.p2{
+    display: flex;
     font-size: 14px;
     color: white;
 }
 
+.input-give{
+    display: flex;
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
 
+.input-give:hover {
+    background-color: #fff;
+}
+
+span.give-back{
+    color: white;
+}
+/*End Style of rent*/
+
+/*Style Slides*/
 .slider{
     margin: 0 auto;
     width: 800px;
@@ -147,11 +202,10 @@ input.input-date-return{
     overflow: hidden;
 }
 
-.slides
-{
-    display: flex;
-    width: 800px;
+.slides{
+    width: 400%;
     height: 400px;
+    display: flex;
 }
 
 .slides input{
@@ -161,6 +215,7 @@ input.input-date-return{
 .slide{
     width: 25%;
     position: relative;
+    transition: 2s;
 }
 
 .slide img{
@@ -168,10 +223,10 @@ input.input-date-return{
 }
 
 .manual-navigation{
-    display: flex;
-    position: relative;
+    position: absolute;
     width: 800px;
     margin-top: -40px;
+    display: flex;
     justify-content: center;
 }
 
@@ -184,7 +239,7 @@ input.input-date-return{
 }
 
 .manual-btn:not(:last-child){
-    margin-right: 1vw;
+    margin-right: 40px;
 }
 
 .manual-btn:hover{
@@ -194,6 +249,37 @@ input.input-date-return{
 #radio1:checked ~ .first{
     margin-left: 0;
 }
+
 #radio2:checked ~ .first{
     margin-left: -25%;
 }
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+/*End Style of rent*/
