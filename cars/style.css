@@ -19,7 +19,7 @@ html, body{
     display: flex;
     align-items: center;/*Alinha os itens no centro*/;
     padding-right: 25rem;
-    font-weight: bold;
+    cursor: pointer;
 }
 
 .nav-list{
@@ -42,14 +42,27 @@ html, body{
 
 .navbar > ul > li,
  .navbar > ul > .nav-list > li {
+    display: flex;
     color: rgb(255 255 255);
     font-weight: 400;
     font-size: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
-.navbar > li > .nav-item > li :hover {
-   font-weight: 700;
+.navbar > ul > .nav-list > li:hover{
+    font-weight: 700;
 }
+
+.navbar > ul > li.logo{
+    font-size: 2rem;
+    
+}
+.navbar > ul > li.logo:hover{
+    font-weight: 700;
+}
+
 
 .navbar > ul > .nav-list {
     display: flex;
@@ -66,7 +79,7 @@ html, body{
 .nav-link{
     text-decoration: none;/*desmarca links*/
     font-size: 1.15rem;
-    color: white;
+    color: rgb(255 255 255);
     font-weight: 400;
 }
 
@@ -75,7 +88,7 @@ html, body{
     justify-content: center;
     border: none;
     background-color: #0187a7;
-    color: white;
+    color: rgb(255 255 255);
     list-style: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -83,7 +96,7 @@ html, body{
 
 
 .login-btn{
-    color: white;
+    color: rgb(255 255 255);
     font-weight: 450;
     font-size: 1.1rem;
     cursor: pointer;
@@ -95,11 +108,24 @@ html, body{
 
 .alugar{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 0.6em 2em 5em;
     justify-content: space-between;
-    padding: 0.6em 0em 5em;
-    gap: 1rem;
     background: rgba(0,0,0,.45);
+    width: 100%;
+}
+
+.paragrafo{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0em 0em 2em;
+}
+
+.inputs{
+    display: flex;
+    padding: 1em 0em 0em;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -107,34 +133,24 @@ input.input-place{
     display: flex;
     border-radius: 5px;
     box-shadow: 0px;
-    box-sizing: 0;
-    padding: 0.5rem;
     font-size: 18px;
     border: none;
-    width: 100%;
 }
 
 input.input-place-return{
     display: flex;
     border-radius: 5px;
     box-shadow: 0px;
-    box-sizing: 0;
-    padding: 0.5rem;
     font-size: 18px;
     border: none;
-    width: 100%;
 }
 
 input.input-date-remove{
     display: flex;
     border-radius: 5px;
     box-shadow: 0px;
-    box-sizing: 0;
-    padding: 0.5rem;
-    width: 100%;
     font-size: 18px;
     border: none;
-    width: 100%;
 }
 
 input.input-date-return{
@@ -142,55 +158,45 @@ input.input-date-return{
     border: none;
     border-radius: 5px;
     box-shadow: 0px;
-    padding: 0.5rem;
-    width: 100%;
     font-size: 18px;
 }
 
 #button-search{
     display: flex;
     box-shadow: none;
-    border-color: white;
-    border-width: 0.2vh;
-    padding: 0.5rem 1rem 0.1rem;
+    align-items: center;
+    color: rgb(255 255 255);
+    border-color: rgb(255 255 255);
+    border-width: 0;
+    padding: 0.5rem;
     background-color: #0187a7;
     border-radius: 0.2em;
-}
-
-#button-search a{
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 1.1em;
 }
 
 .p1{
     display: flex;
     font-size: 3.3vh;
-    color: white;
+    color: rgb(255 255 255);
 }
 
 .p2{
     display: flex;
     font-size: 14px;
-    color: white;
+    color: rgb(255 255 255);
 }
 
 .input-give{
     display: flex;
-    border: 2px solid #fff;
+    border: 2px solid rgb(255 255 255);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
 
-.input-give:hover {
-    background-color: #fff;
-}
 
 span.give-back{
-    color: white;
+    color: rgb(255 255 255);
 }
 /*End Style of rent*/
 

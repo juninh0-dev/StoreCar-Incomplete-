@@ -17,16 +17,18 @@
                 <li class="logo">Open Car</li>
 
                 <div class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-                    <li class="nav-item">
-                        <a href="help.html" class="nav-link help-link">
-                            <img src="assets/interrogation.png" alt="Interrogation-Point">Ajuda
-                        </a>
+                    <li class="nav-item" onclick="contact()">
+                        Contato
                     </li>
-                    <li class="nav-item" onclick="reservas()">Minhas Reservas</li>
+                    <li class="nav-item" onclick="help()">
+                            <img src="assets/interrogation.png" alt="Interrogation-Point">Ajuda
+                    </li>
+                    <li class="nav-item" onclick="reservas()">
+                        Minhas Reservas</li>
                     <button class="login-btn" onclick="login()">Entrar</button>
                 </div>
             </ul>
+            
         </nav>
         <!--end navbar-->
     </header>
@@ -34,14 +36,18 @@
 
     <!--Inputs-alugar-->
     <div class="alugar">
+        <div class="paragrafo">
             <p class="p1"><strong>Alugue um carro</strong></p>
-            <p class="p2">Local de Retirada</p>
-            <input class="input-place" type="text" required placeholder="📍 Onde você quer alugar?">
+        </div>
+        <p class="p2">Local de Retirada</p>
+        <div class="inputs">
+            <input class="input-place " type="text" required placeholder="📍 Onde você quer alugar?">
             <input class="input-place-return" type="text" required placeholder="📍 Onde você ira devolver?">
             <input class="input-date-remove" type="datetime-local">
             <input class="input-date-return" type="datetime-local">
-            <button id="button-search" type="submit"><a href="#">Buscar</a></button><br>
+            <button id="button-search" type="submit">Buscar</a></button><br>
             <input class="input-give" type="radio"> <span class="give-back">Devolver em outra loja</span>
+        </div>
     </div>
     <!-- End Inputs-alugar-->
 

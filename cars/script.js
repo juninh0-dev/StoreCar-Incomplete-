@@ -14,6 +14,15 @@
 //    document.getElementById("radio"+count).checked = true;
 //}
 
+function contact(){
+    location.href="#"
+}
+
+function help(){
+    location.href="/help.html"
+}
+
+
 function login(){
     location.href="/login.html"
 }
@@ -21,3 +30,4 @@ function login(){
 function reservas(){
     location.href="/MinhasReservas.html"
 }
+
